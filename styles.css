@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.5s;
+  }
+  
+  .calculator {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Default background color */
+  }
+  
+  .display {
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 2em;
+    padding: 10px;
+    text-align: right;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .button {
+    border: none;
+    padding: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button:active {
+    background-color: #ddd;
+  }
+  
+  .button-operator {
+    background-color: #f4f4f4;
+  }
+  
+  .button-zero {
+    grid-column: span 2;
+  }
+  
+  .button-equals {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .button-clear {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  .dark-mode-toggle::before {
+    content: '\1F319'; /* Unicode character for crescent moon */
+    font-size: 1.5em;
+  }
+  
+  .dark-mode .dark-mode-toggle::before {
+    content: '\2600'; /* Unicode character for sun */
+  }
+  
+  .dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  
+  .dark-mode .calculator {
+    background-color: #333; /* Dark mode background color */
+  }
+  
+  .dark-mode .display {
+    background-color: #555; /* Dark mode display background color */
+    color: #eee; /* Dark mode display text color */
+  }
+  
+  .dark-mode .button {
+    background-color: #444; /* Dark mode button background color */
+    color: #fff; /* Dark mode button text color */
+  }
+  
+  .dark-mode .button-operator {
+    background-color: #666; /* Dark mode operator button background color */
+  }
+  
+  .dark-mode .button-equals {
+    background-color: #ff9800; /* Dark mode equals button background color */
+    color: #fff; /* Dark mode equals button text color */
+  }
+  
+  .dark-mode .button-clear {
+    background-color: #e74c3c; /* Dark mode clear button background color */
+  }
+  
